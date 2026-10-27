@@ -1,3 +1,3 @@
 @FunctionalInterface public interface Provider { String next() throws Exception; }
 
-//throws exception is a warning lable
+//throws exception is a warning lablel

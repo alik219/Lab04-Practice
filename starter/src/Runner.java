@@ -9,19 +9,29 @@ public final class Runner {
                 throw new IllegalArgumentException("Provider cannot be null.");
             }
 
-            for (int calls = 0;call < limit; calls++) {                
-                string command;
+            boolean hasRead = false;
+            boolean haslisted = false;
+
+            for (int calls = 0;calls < limit; calls++) {                
+                String command;
                 try {
                     command = provider.next();
                 }
                 catch (Exception e) {
                     return "PROVIDER_ERROR";
                 }
+
+                if (command == null) {
+                    continue;
+                }
+
+                if ()
+
             }
 
-            return calls;
-            
-            
-            throw new UnsupportedOperationException("TODO Lab04 Runner.run");
+
+
+
+            return "STEP_LIMIT";
         }
     }
