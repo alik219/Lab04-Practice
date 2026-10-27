@@ -25,13 +25,24 @@ public final class Runner {
                     continue;
                 }
 
-                if ()
-
+                if (command.equals("READ")) {
+                    hasRead = true;
+                }
+                else if (command.equals("LIST")) {
+                    if (hasRead == true) {
+                        haslisted = true;}
+                }
+                else if (command.equals("PROPOSE")) {
+                    if (hasRead == true && haslisted == true) {
+                        return "AWAITING_APPROVAL";}
+                }
+                else if (command.equals("FINISH")) {
+                    return "NO_ACTION";
+                }
+                else {
+                    continue;
+                }
             }
-
-
-
-
             return "STEP_LIMIT";
         }
     }
